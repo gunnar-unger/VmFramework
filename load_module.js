@@ -43,7 +43,7 @@ VmFramework.load_module=function(options){
 
 VmFramework.load_include=function(options){
 	var content=options.content;
-	var lines=content.split('\r');
+	var lines=content.split('\n');
 	for(var i=0;i<lines.length;i++){
 		if(lines[i].length>10){
 			if(lines[i].indexOf('VmAppInclude:')!==-1){
@@ -64,7 +64,7 @@ VmFramework.load_include=function(options){
 	}
 	var new_content="";
 	for(var i=0;i<lines.length;i++){
-		new_content+=lines[i]+'\r';
+		new_content+=lines[i]+'\n';
 	}
 	return new_content;
 }
